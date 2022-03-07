@@ -1,0 +1,15 @@
+{
+  "modifyObstructiveCode": false,
+  "experimentalSourceRewriting": true,
+  "chromeWebSecurity": true,
+  "projectId": "ts3myn",
+  "env":{
+    "url": "https://rahulshettyacademy.com/"
+  },
+  "reporter": "mochawesome",
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  },
+  "testFiles": "**/*.feature"
+}

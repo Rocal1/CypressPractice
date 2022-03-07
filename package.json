@@ -1,0 +1,35 @@
+{
+  "name": "cypresspractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "cypressDashboard-test": "npx cypress run --record --key 0b51db13-30ca-4ef1-a2e6-6e69cac73fc1",
+    "mochawesome-test": "npx cypress run --reporter mochawesome",
+    "open": "cypress open",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "smokeTests": "npx cypress-tags run -e TAGS='@Smoke' --headed --browser chrome",
+    "regressionTests": "npx cypress-tags run -e TAGS='@Regression' --headed --browser chrome"
+  },
+  "author": "Rodrigo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.0.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.1.1",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
